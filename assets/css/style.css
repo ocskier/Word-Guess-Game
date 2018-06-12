@@ -8,9 +8,6 @@
     background-size: cover;
 }
 
-.mybtn {
-
-}
 section {
     display: flex;
     justify-content: space-evenly;
@@ -21,8 +18,4 @@ section {
 div {
     border: 2px solid pink;
     width: 140px;
-}
-
-button {
-    
 }
