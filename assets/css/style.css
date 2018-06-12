@@ -4,10 +4,13 @@
     width: 100%;
     padding: 0;
     text-align: center;
-    background-image: url(../images/delfi-de-la-rua-152121-unsplash.jpg);
-    background-size: 50%;
+    background-image: url(../images/map-of-the-world-2401458_1920_copy.jpg);
+    background-size: cover;
 }
 
+.mybtn {
+
+}
 section {
     display: flex;
     justify-content: space-evenly;
