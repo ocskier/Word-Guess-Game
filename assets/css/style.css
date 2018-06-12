@@ -1,0 +1,15 @@
+section {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width:100%;
+}
+
+div {
+    border: 2px solid pink;
+    width: 140px;
+}
+
+button {
+    
+}

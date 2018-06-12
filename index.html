@@ -10,4 +10,75 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
+
+<body>
+    <section>   
+        <button onclick="printLetter('a')">a</button>
+        <button onclick="printLetter('b')">b</button>
+        <button onclick="printLetter('c')">c</button>
+        <button onclick="printLetter('d')">d</button>
+        <button onclick="printLetter('e')">e</button>
+        <button onclick="printLetter('f')">f</button>
+        <button onclick="printLetter('g')">g</button>
+        <button onclick="printLetter('h')">h</button>
+        <button onclick="printLetter('i')">i</button>
+        <button onclick="printLetter('j')">j</button>
+        <button onclick="printLetter('k')">k</button>
+        <button onclick="printLetter('l')">l</button>
+        <button onclick="printLetter('m')">m</button>
+        <button onclick="printLetter('n')">n</button>
+        <button onclick="printLetter('o')">o</button>
+        <button onclick="printLetter('p')">p</button>
+        <button onclick="printLetter('q')">q</button>
+        <button onclick="printLetter('r')">r</button>
+        <button onclick="printLetter('s')">s</button>
+        <button onclick="printLetter('t')">t</button>
+        <button onclick="printLetter('u')">u</button>
+        <button onclick="printLetter('v')">v</button>
+        <button onclick="printLetter('w')">w</button>
+        <button onclick="printLetter('x')">x</button>
+        <button onclick="printLetter('y')">y</button>
+        <button onclick="printLetter('z')">z</button>
+    </section>
+    <br>
+    <br>
+    
+    <section>
+    <div><p>Your guess!</p>
+            <button id="para"><p></p></button>
+        </div>
+    </section>
+        
+
+
+<script type="text/javascript">
+    var alphabet = ["ostrich","dog"];
+    var numGuesses = 10;
+    var word = alphabet[0];
+
+    
+    function printLetter(letter) {
+        document.getElementById('para').innerHTML = letter;
+        console.log(letter);
+        checkLetter(letter);
+    }
+
+    function checkLetter(letter) {
+        count = 0;
+        if (numGuesses > 0) {
+        for (var i=0; i < word.length; i++) {
+            if (letter == word[i]){
+            count++;
+            console.log(count);
+            }
+            
+        }
+        alert("Thats in the word " + count + " times!");
+        numGuesses=numGuesses-1;
+        console.log(numGuesses);
+    }
+    }
+
+</script>
+</body>
 </html>
