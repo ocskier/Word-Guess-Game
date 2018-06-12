@@ -1,3 +1,13 @@
+/* Header */
+
+#myjumbotron {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-image: url(../images/delfi-de-la-rua-152121-unsplash.jpg);
+    background-size: 50%;
+}
+
 section {
     display: flex;
     justify-content: space-evenly;

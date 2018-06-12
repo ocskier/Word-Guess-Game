@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    
+    <header>
+            <div id="myjumbotron" class="jumbotron">
+                <h1 class="display-4 myh1">Hangman</h1>
+                <hr class="my-4">
+                <p>World Country Style</p>
+            </div>
+    </header>
+    
     <section>   
         <button onclick="printLetter('a')">a</button>
         <button onclick="printLetter('b')">b</button>
@@ -52,10 +61,17 @@
 
 
 <script type="text/javascript">
-    var alphabet = ["ostrich","dog"];
+    var countrylist = ["aruba","australia","belgium","brazil","chile","canada","cuba","denmark","ecuador","finland","france","greece",
+        "germany","hungary","honduras","iceland","iraq","italy","india","ireland","israel","japan","kenya","libya","malaysia","mexico",
+        "morocco","nepal","norway","netherlands","pakistan","paraguay","peru","qatar","romania","spain","sudan","somalia","thailand",
+        "turkey","ukraine","uruguay","vanuata","zimbabwe"];
+    
     var numGuesses = 10;
-    var word = alphabet[0];
+    var randomIndexValue = Math.floor(Math.random()*countrylist.length);
+    var word = countrylist[randomIndexValue];
 
+    console.log(randomIndexValue);
+    console.log(word);
     
     function printLetter(letter) {
         document.getElementById('para').innerHTML = letter;
@@ -78,6 +94,7 @@
         console.log(numGuesses);
     }
     }
+
 
 </script>
 </body>
