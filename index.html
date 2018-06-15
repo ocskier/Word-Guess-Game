@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+
 </head>
 
 <body>
@@ -53,49 +54,19 @@
     <br>
     
     <section>
-    <div><p>Your guess!</p>
+        <div>
+            <p>Your guess!</p>
             <button id="para"><p></p></button>
         </div>
     </section>
+    <br>
+    <br>
+    <section id="answerSpace">
+
+    </section>
         
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-
-<script type="text/javascript">
-    var countrylist = ["aruba","australia","belgium","brazil","chile","canada","cuba","denmark","ecuador","finland","france","greece",
-        "germany","hungary","honduras","iceland","iraq","italy","india","ireland","israel","japan","kenya","libya","malaysia","mexico",
-        "morocco","nepal","norway","netherlands","pakistan","paraguay","peru","qatar","romania","spain","sudan","somalia","thailand",
-        "turkey","ukraine","uruguay","vanuata","zimbabwe"];
-    
-    var numGuesses = 10;
-    var randomIndexValue = Math.floor(Math.random()*countrylist.length);
-    var word = countrylist[randomIndexValue];
-
-    console.log(randomIndexValue);
-    console.log(word);
-    
-    function printLetter(letter) {
-        document.getElementById('para').innerHTML = letter;
-        console.log(letter);
-        checkLetter(letter);
-    }
-
-    function checkLetter(letter) {
-        count = 0;
-        if (numGuesses > 0) {
-        for (var i=0; i < word.length; i++) {
-            if (letter == word[i]){
-            count++;
-            console.log(count);
-            }
-            
-        }
-        alert("Thats in the word " + count + " times!");
-        numGuesses=numGuesses-1;
-        console.log(numGuesses);
-    }
-    }
-
-
-</script>
 </body>
 </html>

@@ -19,3 +19,13 @@ div {
     border: 2px solid pink;
     width: 140px;
 }
+
+#answerSpace {
+    padding: 0 125px;
+}
+
+.mybutton {
+    border-bottom: 0 0 2px 0;
+    background: white;
+}
+
