@@ -14,7 +14,7 @@ console.log(word);
 console.log(word.length);
 
 for (i=0; i < word.length; i++) {    
-    $("#answerSpace").append('<button class="mybutton"><p class="answer-p"></p></button>');
+    $("#answerSpace").append('<span class="badge badge-success mybadge"><button class="mybutton"><p class="answer-p"></p></button></span>');
 }
 
 function printLetter(letter) {
@@ -37,7 +37,7 @@ function printLetter(letter) {
             for (i=0; i < word.length; i++) {
                 var j=i+1;  
                 if (word[i] === letter) {
-                $(".mybutton:nth-child(" + j + ") p").text(word[i]);
+                $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i]);
                 lettersCorrect++;
                 }
             }

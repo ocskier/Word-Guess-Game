@@ -19,6 +19,20 @@ section {
     display: inline-block;
 }
 
+.abcbutton {
+    margin: 6px 0;
+}
+
 .mybutton {
     margin: 0 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.mybadge {
+    margin-top: 10px;
+}
+
+.myspan {
+    padding-top: 10px;
 }
