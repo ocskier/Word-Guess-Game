@@ -22,48 +22,56 @@
             </div>
     </header>
     
-    <section>   
-        <button onclick="printLetter('a')">a</button>
-        <button onclick="printLetter('b')">b</button>
-        <button onclick="printLetter('c')">c</button>
-        <button onclick="printLetter('d')">d</button>
-        <button onclick="printLetter('e')">e</button>
-        <button onclick="printLetter('f')">f</button>
-        <button onclick="printLetter('g')">g</button>
-        <button onclick="printLetter('h')">h</button>
-        <button onclick="printLetter('i')">i</button>
-        <button onclick="printLetter('j')">j</button>
-        <button onclick="printLetter('k')">k</button>
-        <button onclick="printLetter('l')">l</button>
-        <button onclick="printLetter('m')">m</button>
-        <button onclick="printLetter('n')">n</button>
-        <button onclick="printLetter('o')">o</button>
-        <button onclick="printLetter('p')">p</button>
-        <button onclick="printLetter('q')">q</button>
-        <button onclick="printLetter('r')">r</button>
-        <button onclick="printLetter('s')">s</button>
-        <button onclick="printLetter('t')">t</button>
-        <button onclick="printLetter('u')">u</button>
-        <button onclick="printLetter('v')">v</button>
-        <button onclick="printLetter('w')">w</button>
-        <button onclick="printLetter('x')">x</button>
-        <button onclick="printLetter('y')">y</button>
-        <button onclick="printLetter('z')">z</button>
-    </section>
-    <br>
-    <br>
-    
-    <section>
-        <div>
-            <p>Your guess!</p>
-            <button id="para"><p></p></button>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                    <div class="btn-group mybtngrp" role="group" aria-label="Basic example">
+        <button class = "btn btn-secondary" onclick="printLetter('a')">a</button>
+        <button class = "btn btn-secondary" onclick="printLetter('b')">b</button>
+        <button class = "btn btn-secondary" onclick="printLetter('c')">c</button>
+        <button class = "btn btn-secondary" onclick="printLetter('d')">d</button>
+        <button class = "btn btn-secondary" onclick="printLetter('e')">e</button>
+        <button class = "btn btn-secondary" onclick="printLetter('f')">f</button>
+        <button class = "btn btn-secondary" onclick="printLetter('g')">g</button>
+        <button class = "btn btn-secondary" onclick="printLetter('h')">h</button>
+        <button class = "btn btn-secondary" onclick="printLetter('i')">i</button>
+        <button class = "btn btn-secondary" onclick="printLetter('j')">j</button>
+        <button class = "btn btn-secondary" onclick="printLetter('k')">k</button>
+        <button class = "btn btn-secondary" onclick="printLetter('l')">l</button>
+        <button class = "btn btn-secondary" onclick="printLetter('m')">m</button>
+        <button class = "btn btn-secondary" onclick="printLetter('n')">n</button>
+        <button class = "btn btn-secondary" onclick="printLetter('o')">o</button>
+        <button class = "btn btn-secondary" onclick="printLetter('p')">p</button>
+        <button class = "btn btn-secondary" onclick="printLetter('q')">q</button>
+        <button class = "btn btn-secondary" onclick="printLetter('r')">r</button>
+        <button class = "btn btn-secondary" onclick="printLetter('s')">s</button>
+        <button class = "btn btn-secondary" onclick="printLetter('t')">t</button>
+        <button class = "btn btn-secondary" onclick="printLetter('u')">u</button>
+        <button class = "btn btn-secondary" onclick="printLetter('v')">v</button>
+        <button class = "btn btn-secondary" onclick="printLetter('w')">w</button>
+        <button class = "btn btn-secondary" onclick="printLetter('x')">x</button>
+        <button class = "btn btn-secondary" onclick="printLetter('y')">y</button>
+        <button class = "btn btn-secondary" onclick="printLetter('z')">z</button>
+                        </div>
+    </div>
+        </div>
+        <br>
+        <br>
+        <div class="row justify-content-center">
+                <section class="col-1">
+                            <p>Your guess!</p>
+                            <button id="para"><p></p></button>
+                        </section>
+            </div>
+            <br>
+        <br>
+        <div class="row">
+                    <section id="answerSpace" class="col-12">
+                
+                    </section>
         </div>
     </section>
-    <br>
-    <br>
-    <section id="answerSpace">
 
-    </section>
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>

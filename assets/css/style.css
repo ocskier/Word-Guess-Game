@@ -9,23 +9,16 @@
 }
 
 section {
-    display: flex;
+    min-height: calc(100vh - 70px);;
     justify-content: space-evenly;
     text-align: center;
     width:100%;
 }
 
-div {
-    border: 2px solid pink;
-    width: 140px;
-}
-
-#answerSpace {
-    padding: 0 125px;
+.mybtngrp {
+    display: inline-block;
 }
 
 .mybutton {
-    border-bottom: 0 0 2px 0;
-    background: white;
+    margin: 0 10px;
 }
-
