@@ -37,8 +37,13 @@ function printLetter(letter) {
             for (i=0; i < word.length; i++) {
                 var j=i+1;  
                 if (word[i] === letter) {
-                $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i]);
-                lettersCorrect++;
+                    if (i==0) {
+                        $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i].toUpperCase());   
+                    }
+                    else {
+                        $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i]);
+                    }
+                    lettersCorrect++;
                 }
             }
         }
