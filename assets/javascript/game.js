@@ -13,6 +13,7 @@ var lettersCorrect = 0;
 for (i=0; i < 26; i++) {
     $(".mybtngrp").append('<button class = "btn btn-secondary abcbutton" onclick="printLetter('+"'" + alphabet[i] + "'"+')">' + alphabet[i] + '</button>'); 
 }
+$("#reset").append('<button class = "btn btn-secondary resetbutton">Reset</button>');
 
 console.log(word);
 

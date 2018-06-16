@@ -20,7 +20,7 @@ section {
 }
 
 .abcbutton {
-    margin: 0 6px;
+    margin: 4px 6px;
 }
 
 .mybutton {
@@ -35,6 +35,13 @@ section {
     font-size: 16px;
 }
 
+#reset {
+    margin-top:40px;
+}
+.resetbutton {
+    background: rgb(94, 93, 93);
+    color: white;
+}
 .myspan {
     padding-top: 10px;
 }
