@@ -20,7 +20,7 @@ section {
 }
 
 .abcbutton {
-    margin: 6px 0;
+    margin: 0 6px;
 }
 
 .mybutton {
@@ -30,6 +30,7 @@ section {
 }
 
 .mybadge {
+    border-radius: 0;
     margin-top: 10px;
     font-size: 16px;
 }

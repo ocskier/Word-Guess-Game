@@ -16,7 +16,7 @@
     
     <header>
             <div id="myjumbotron" class="jumbotron">
-                <button class="btn"><h1 class="display-4 myh1">Hangman</h1></button>
+                <button class="btn"><h1 class="display-4 myh1">Word Guess</h1></button>
                 <hr class="my-4">
                 <button class="btn"><p>World Countries</p></button>
             </div>
@@ -25,42 +25,28 @@
     <section class="container-fluid">
         <div class="row">
             <div class="col-12">
-                    <div class="btn-group mybtngrp" role="group" aria-label="Basic example">
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('a')">a</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('b')">b</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('c')">c</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('d')">d</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('e')">e</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('f')">f</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('g')">g</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('h')">h</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('i')">i</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('j')">j</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('k')">k</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('l')">l</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('m')">m</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('n')">n</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('o')">o</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('p')">p</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('q')">q</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('r')">r</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('s')">s</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('t')">t</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('u')">u</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('v')">v</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('w')">w</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('x')">x</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('y')">y</button>
-        <button class = "btn btn-secondary abcbutton" onclick="printLetter('z')">z</button>
-                        </div>
-    </div>
+                <div class="btn-group mybtngrp" role="group" aria-label="Basic example">
+                        
+                </div>
+            </div>
         </div>
         <br>
         <br>
         <div class="row justify-content-center">
-                <section class="col-sm-auto">
-                        <span class="badge badge-info mybadge">Guess!<br>
-                            <button id="para" class="mybadge"><p></p></button>
+                <section class="col-sm-4">
+                        <span class="badge badge-info mybadge">Letters Tried<br>
+                            <button id="picks" class="mybadge"><p></p></button>
+                        </span>
+                </section>
+                
+                <section class="col-sm-4">
+                        <span class="badge badge-info mybadge">Pick<br>
+                            <button id="guess-ltr" class="mybadge"><p></p></button>
+                        </span>
+                </section>
+                <section class="col-sm-4">
+                        <span class="badge badge-info mybadge">Guesses Left<br>
+                            <button id="guesses" class="mybadge"><p></p></button>
                         </span>
                 </section>
             </div>
@@ -70,6 +56,9 @@
                 <div id="answerSpace" class="col-sm-auto">
 
                 </div>
+        </div>
+        <div class="row justify-content-center">
+                <div id="reset" class="col-sm-auto"></div>
         </div>
     </section>
 
