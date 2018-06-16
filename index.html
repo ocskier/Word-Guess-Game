@@ -16,8 +16,8 @@
     
     <header>
             <div id="myjumbotron" class="jumbotron">
-                <button class="btn"><h1 class="display-4 myh1">Word Guess</h1></button>
-                <hr class="my-4">
+                <button class="btn"><h1 class="display-4">Word Guess</h1></button>
+                <br><br><br>
                 <button class="btn"><p>World Countries</p></button>
             </div>
     </header>
@@ -34,7 +34,8 @@
         <br>
         
         <div class="row justify-content-center">
-                <section class="col-sm-4">
+                <section class="col-sm-1"></section>
+                <section class="col-sm-3">
                         <span class="badge badge-info mybadge">Letters Tried<br>
                             <button id="picks" class="mybadge"><p></p></button>
                         </span>
@@ -45,11 +46,13 @@
                             <button id="guess-ltr" class="mybadge"><p></p></button>
                         </span>
                 </section>
-                <section class="col-sm-4">
+                <section class="col-sm-3">
                         <span class="badge badge-info mybadge">Guesses Left<br>
                             <button id="guesses" class="mybadge"><p></p></button>
                         </span>
                 </section>
+                <section class="col-sm-1"></section>
+
         </div>
         
         <br>
@@ -65,7 +68,21 @@
         <div class="row justify-content-center">
                 <div id="reset" class="col-sm-auto"></div>
         </div>
+
+        <br>
+        <br>
+        <audio id="WonAud">
+                <source src="assets\images\WonSound.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="LostAud">
+                <source src="assets\images\LostSound.mp3" type="audio/mpeg">
+        </audio>
     </section>
+    <footer class="footer my-footer">
+            <div class="container">
+                <span>@Copyright </span>
+            </div>
+    </footer>
 
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

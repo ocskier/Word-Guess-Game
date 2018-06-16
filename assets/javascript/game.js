@@ -21,6 +21,8 @@ for (i=0; i < word.length; i++) {
     $("#answerSpace").append('<span class="badge badge-success mybadge"><button class="mybutton"><p class="answer-p"></p></button></span>');
 }
 
+$(".resetbutton").on("click", refreshPage);
+
 function printLetter(letter) {
         if (numGuesses > 0) {
         numGuesses--;
@@ -59,15 +61,18 @@ function printLetter(letter) {
 
         if (lettersCorrect === word.length) {
             setTimeout(function () {
+                $('audio#WonAud')[0].play();
                 alert("You won!!!");
                 refreshPage();
-            }, 300);
+                }, 500);
         }
+
         if (numGuesses == 0 && !(lettersCorrect == word.length)) {
             setTimeout(function () {
+                $('audio#LostAud')[0].play();
                 alert("You lost!!!");
                 refreshPage();
-            }, 300);
+                }, 500);
         }
 }
 
