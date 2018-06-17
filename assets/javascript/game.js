@@ -1,8 +1,8 @@
 var pickedLetters = [];
-var countrylist = ["aruba","australia","belgium","brazil","chile","canada","cuba","denmark","ecuador","finland","france","greece",
-        "germany","hungary","honduras","iceland","iraq","italy","india","ireland","israel","japan","kenya","libya","malaysia","mexico",
-        "morocco","nepal","norway","netherlands","pakistan","paraguay","peru","qatar","romania","spain","sudan","somalia","thailand",
-        "turkey","ukraine","uruguay","vanuata","zimbabwe"];
+var countrylist = ["austria","aruba","australia","belgium","bolivia","brazil","chile","china","canada","cuba","denmark","ecuador","finland",
+        "france","greece","germany","hungary","honduras","iceland","iraq","italy","india","ireland","israel","japan","kenya",
+        "libya","malaysia","mexico","morocco","nepal","norway","netherlands","pakistan","paraguay","peru","portugal","qatar",
+        "romania","spain","sudan","somalia","sweden","thailand","turkey","ukraine","uruguay","vanuata","vietnam","zimbabwe"];
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
         
 var randomIndexValue = Math.floor(Math.random()*countrylist.length);
@@ -32,6 +32,7 @@ function printLetter(letter) {
 
         if (pickedLetters.indexOf(letter) === -1) {
             pickedLetters.push(letter);
+            pickedLetters.sort();
             document.getElementById('picks').innerHTML = pickedLetters;
         }
 
@@ -61,15 +62,25 @@ function printLetter(letter) {
 
         if (lettersCorrect === word.length) {
             setTimeout(function () {
-                $('audio#WonAud')[0].play();
+                $("#wonAud")[0].play();
                 alert("You won!!!");
                 refreshPage();
                 }, 500);
         }
 
         if (numGuesses == 0 && !(lettersCorrect == word.length)) {
-            setTimeout(function () {
-                $('audio#LostAud')[0].play();
+            for (i=0; i < word.length; i++) {
+                var j=i+1;
+                if (i===0) {
+                        $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i].toUpperCase());   
+                    }
+                    else {
+                        $(".mybadge:nth-child(" + j + ") .mybutton p").text(word[i]);
+                    }
+                }
+            
+                setTimeout(function () {
+                $("#lostAud")[0].play();
                 alert("You lost!!!");
                 refreshPage();
                 }, 500);
