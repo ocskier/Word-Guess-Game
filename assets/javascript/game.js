@@ -3,25 +3,83 @@ var countrylist = ["austria","aruba","australia","belgium","bolivia","brazil","c
         "france","greece","germany","hungary","honduras","iceland","iraq","italy","india","ireland","israel","japan","kenya",
         "libya","malaysia","mexico","morocco","nepal","norway","netherlands","pakistan","paraguay","peru","portugal","qatar",
         "romania","spain","sudan","somalia","sweden","thailand","turkey","ukraine","uruguay","vanuata","vietnam","zimbabwe"];
+var rockBands = ["beatles","ledzeppelin", "pinkfloyd","metallica","aerosmith","nirvana","queen","radiohead","eagles","vanhalen",
+        "pearljam","rush","Doors","ramones","bonjovi","defleopard","journey","linkinpark","ironmaiden","coldplay","rem","kiss"];
+var states= ["alabama","alaska","arizona","arkansas","california","colorado","delaware","florida","georgia","hawaii","idaho",
+            "illinois","indiana","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","michigan","minnesota",
+            "missouri","newjersey","newmexico","newyork","northcarolina","ohio","oklahoma","oregon","tennessee","texas","utah",
+            "vermont","virginia","wisconsin","wyoming"];
+var animals= ["alligator","ant","bear","bee","bird","camel","cat","cheetah","chicken","chimpanzee","cow","crocodile","deer","dog",
+            "dolphin","duck","eagle","elephant","fish","fly","fox","frog","giraffe","goat","goldfish","hamster","hippo",
+            "horse","kangaroo","kitten","lion","lobster","monkey","octopus","owl","panda","pig","puppy","rabbit","rat","scorpion",
+            "seal","shark","sheep","snail","snake","spider","squirrel","tiger","turtle","wolf","zebra"];
+
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-        
-var randomIndexValue = Math.floor(Math.random()*countrylist.length);
-var word = countrylist[randomIndexValue];
+var selectedList = countrylist;
+
+var word = printScreen();
 var numGuesses = word.length + 5;
 var lettersCorrect = 0;
+
+$(".dropdown-menu a:eq(0)").on("click", function(){
+    selectedList = countrylist;
+    $("body").css("background-image", "url(assets/images/map-of-the-world-2401458_1920_copy.jpg)");
+    $(".dropdown-toggle").text("World Countries");
+    resetPage();
+    word = printScreen();
+});
+
+$(".dropdown-menu a:eq(1)").on("click", function(){
+    selectedList = rockBands;
+    $("body").css("background-image", "url(assets/images/rockbands.jpg)");
+    $(".dropdown-toggle").text("Rock Bands");
+    resetPage();
+    word = printScreen();
+});
+
+$(".dropdown-menu a:eq(2)").on("click", function(){
+    selectedList = states;
+    $("body").css("background-image", "url(assets/images/states.jpg)");
+    $(".dropdown-toggle").text("US States");
+    resetPage();
+    word = printScreen();
+});
+
+$(".dropdown-menu a:eq(3)").on("click", function(){
+    selectedList = animals;
+    $("body").css("background-image", "url(assets/images/animals.jpg)");
+    $(".dropdown-toggle").text("Animals");
+    resetPage();
+    word = printScreen();
+});
+
+function printScreen () {
+var randomIndexValue = Math.floor(Math.random()*selectedList.length);
+var newWord = selectedList[randomIndexValue];
 
 for (i=0; i < 26; i++) {
     $(".mybtngrp").append('<button class = "btn btn-secondary abcbutton" onclick="printLetter('+"'" + alphabet[i] + "'"+')">' + alphabet[i] + '</button>'); 
 }
-$("#reset").append('<button class = "btn btn-secondary resetbutton">Reset</button>');
 
-console.log(word);
+console.log(selectedList);
+console.log(newWord);
 
-for (i=0; i < word.length; i++) {    
+for (i=0; i < newWord.length; i++) {    
     $("#answerSpace").append('<span class="badge badge-success mybadge"><button class="mybutton"><p class="answer-p"></p></button></span>');
 }
+numGuesses = newWord.length + 5;
+lettersCorrect = 0;
+pickedLetters = [];
 
-$(".resetbutton").on("click", refreshPage);
+return newWord;
+}
+
+$("#reset").append('<button class = "btn btn-secondary resetbutton">Reset</button>');
+
+$(".resetbutton").on("click", function() {
+    resetPage();
+    word = printScreen();
+});
 
 function printLetter(letter) {
         if (numGuesses > 0) {
@@ -64,7 +122,8 @@ function printLetter(letter) {
             setTimeout(function () {
                 $("#wonAud")[0].play();
                 alert("You won!!!");
-                refreshPage();
+                resetPage();
+                word = printScreen();
                 }, 500);
         }
 
@@ -79,14 +138,19 @@ function printLetter(letter) {
                     }
                 }
             
-                setTimeout(function () {
                 $("#lostAud")[0].play();
+                setTimeout(function () {
                 alert("You lost!!!");
-                refreshPage();
+                resetPage();
+                word = printScreen();
                 }, 500);
         }
 }
 
-function refreshPage(){
-    window.location.reload();
+function resetPage(){
+    $("#picks").empty();
+    $("#guess-ltr").empty();
+    $("#guesses").empty();
+    $("#answerSpace").empty();
+    $(".mybtngrp").empty();
 } 

@@ -2,6 +2,7 @@
 
 body {
     background: rgb(219, 217, 217);
+    background-image: url(../images/map-of-the-world-2401458_1920_copy.jpg);
 }
 
 
@@ -9,8 +10,7 @@ body {
     width: 100%;
     padding: 0;
     text-align: center;
-    background-image: url(../images/map-of-the-world-2401458_1920_copy.jpg);
-    background-size: cover;
+    background: transparent;
 }
 
 section {
@@ -26,6 +26,7 @@ section {
 
 .abcbutton {
     margin: 4px 6px;
+    border: 3px solid silver;
 }
 
 .mybutton {
@@ -38,6 +39,7 @@ section {
     border-radius: 0;
     margin-top: 10px;
     font-size: 16px;
+    border: 2px solid silver;
 }
 
 .resetbutton {
