@@ -61,9 +61,6 @@ for (i=0; i < 26; i++) {
     $(".mybtngrp").append('<button class = "btn btn-secondary abcbutton" onclick="printLetter('+"'" + alphabet[i] + "'"+')">' + alphabet[i] + '</button>'); 
 }
 
-console.log(selectedList);
-console.log(newWord);
-
 for (i=0; i < newWord.length; i++) {    
     $("#answerSpace").append('<span class="badge badge-success mybadge"><button class="mybutton"><p class="answer-p"></p></button></span>');
 }
