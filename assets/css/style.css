@@ -2,9 +2,13 @@
 
 body {
     background: rgb(219, 217, 217);
-    background-image: url(../images/map-of-the-world-2401458_1920_copy.jpg);
-}
+    background: url(../images/map-of-the-world-2401458_1920_copy.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
+}
 
 #myjumbotron {
     width: 100%;
