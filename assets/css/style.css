@@ -23,7 +23,7 @@ body {
 }
 
 section {
-    min-height: calc(100vh - 70px);;
+    min-height: calc(100vh - 70px);
     justify-content: space-evenly;
     text-align: center;
     width:100%;
