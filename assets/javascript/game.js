@@ -23,7 +23,7 @@ var lettersCorrect = 0;
 
 $(".dropdown-menu a:eq(0)").on("click", function(){
     selectedList = countrylist;
-    $("body").css("background", "url(assets/images/map-of-the-world-2401458_1920_copy.jpg) no-repeat center center fixed");
+    $("body").css("background-image", "url(assets/images/map-of-the-world-2401458_1920_copy.jpg)");
     $(".dropdown-toggle").text("World Countries");
     resetPage();
     word = printScreen();
@@ -31,7 +31,7 @@ $(".dropdown-menu a:eq(0)").on("click", function(){
 
 $(".dropdown-menu a:eq(1)").on("click", function(){
     selectedList = rockBands;
-    $("body").css("background", "url(assets/images/rockbands.jpg) no-repeat center center fixed");
+    $("body").css("background-image", "url(assets/images/rockbands.jpg)");
     $(".dropdown-toggle").text("Rock Bands");
     resetPage();
     word = printScreen();
@@ -39,7 +39,7 @@ $(".dropdown-menu a:eq(1)").on("click", function(){
 
 $(".dropdown-menu a:eq(2)").on("click", function(){
     selectedList = states;
-    $("body").css("background", "url(assets/images/states.jpg) no-repeat center center fixed");
+    $("body").css("background-image", "url(assets/images/states.jpg)");
     $(".dropdown-toggle").text("US States");
     resetPage();
     word = printScreen();
@@ -47,7 +47,7 @@ $(".dropdown-menu a:eq(2)").on("click", function(){
 
 $(".dropdown-menu a:eq(3)").on("click", function(){
     selectedList = animals;
-    $("body").css("background", "url(assets/images/animals.jpg) no-repeat center center fixed");
+    $("body").css("background-image", "url(assets/images/animals.jpg)");
     $(".dropdown-toggle").text("Animals");
     resetPage();
     word = printScreen();
