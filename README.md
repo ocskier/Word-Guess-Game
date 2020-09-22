@@ -1,6 +1,6 @@
 # Word-Guess-Game File
 
-* [Home Page] (assets/images/rockbands.jpg)
+* [Home Page](assets/images/rockbands.jpg)
 
 ### Instructions
 
