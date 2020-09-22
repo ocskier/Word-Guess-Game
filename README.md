@@ -1,6 +1,6 @@
 # Word-Guess-Game File
 
-* [index.html] (Word-Guess-Game/index.html)
+* [Home Page] (assets/images/rockbands.jpg)
 
 ### Instructions
 
