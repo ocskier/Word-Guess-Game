@@ -1,6 +1,6 @@
 # Word-Guess-Game File
 
-* [Home Page](assets/images/rockbands.jpg)
+* [Home Page](https://ocskier.github.io/Word-Guess-Game)
 
 ### Instructions
 
