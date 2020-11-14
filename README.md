@@ -7,7 +7,7 @@
 * This is a random word generating game where the user tries to guess the word 
 from the displayed category.
 
-* The game will generate a random word string from one of the four categories selected from the dropdown menu (default is World Counties).
+* The game will generate a random word string from one of the four categories selected from the dropdown menu (default is World Countries).
 
 * The game will erase the contents of the answer, letters guessed list, current letter selected, and the number of guesses remaining upon a reset, or win, or loss of the game.
 
